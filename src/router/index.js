@@ -8,13 +8,13 @@ Vue.use(VueRouter);
 
 import routes from './routes';
 
-const allowedLocales = ['en', 'fr'];
+import { SUPPORTED_LOCALES } from '../constants/locale';
 
 // Creates regex (en|fr)
 function getLocaleRegex() {
   let reg = '';
-  allowedLocales.forEach((route, index) => {
-    reg = `${reg}${route}${index !== allowedLocales.length - 1 ? '|' : ''}`;
+  SUPPORTED_LOCALES.forEach((locale, index) => {
+    reg = `${reg}${locale.code}${index !== SUPPORTED_LOCALES.length - 1 ? '|' : ''}`;
   });
   return `(${reg})`;
 }

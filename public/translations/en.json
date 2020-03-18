@@ -1,6 +1,10 @@
 {
   "home.content.title": "Welcome to Your Vue.js App",
+  "home.content.subtitle": "For a guide and recipes on how to configure / customize this project, check out the",
+  "404.content.title": "Oops, this page does not exist.",
   "about.content.title": "This is an about page",
   "main.nav.home": "Home",
-  "main.nav.about": "About"
+  "main.nav.about": "About",
+  "main.nav.languages.en": "English",
+  "main.nav.languages.fr": "Français"
 }

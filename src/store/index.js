@@ -5,9 +5,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    locale: process.env.VUE_APP_I18N_LOCALE || 'en',
-    base: '',
-    path: ''
   },
   getters: {
     locale(state) {

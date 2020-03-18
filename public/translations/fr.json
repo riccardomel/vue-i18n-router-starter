@@ -1,6 +1,10 @@
 {
-  "home.content.title": "Welcome to Your Vue.js App",
-  "about.content.title": "This is an FRENCH about page",
-  "main.nav.home": "Home",
-  "main.nav.about": "About"
+  "home.content.title": "Bienvenue dans votre application Vue.js",
+  "home.content.subtitle": "Pour un guide et des recettes sur la façon de configurer / personnaliser ce projet, consultez le",
+  "404.content.title": "Oups, cette page n'existe pas.",
+  "about.content.title": "Ceci est une page sur",
+  "main.nav.home": "Page d'accueil",
+  "main.nav.about": "À propos",
+  "main.nav.languages.en": "English",
+  "main.nav.languages.fr": "Français"
 }

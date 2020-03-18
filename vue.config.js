@@ -1,10 +1,13 @@
 module.exports = {
-  runtimeCompiler: true,
-  pluginOptions: {
-    i18n: {
-      locale: 'en',
-      fallbackLocale: 'dev',
-      enableInSFC: true
+  "runtimeCompiler": true,
+  "pluginOptions": {
+    "i18n": {
+      "locale": "en",
+      "fallbackLocale": "dev",
+      "enableInSFC": true
     }
-  }
+  },
+  "transpileDependencies": [
+    "vuetify"
+  ]
 }
