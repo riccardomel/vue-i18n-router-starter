@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '../store';
-import i18n from '../i18n';
+import i18n from '../plugins/i18n';
 import axios from 'axios';
 
 Vue.use(VueRouter);
