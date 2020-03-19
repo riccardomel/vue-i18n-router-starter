@@ -1,6 +1,6 @@
 # vue-i18n-router
 
-(Demo)[https://d3mrikg3nhlovs.cloudfront.net/]
+[Demo](https://d3mrikg3nhlovs.cloudfront.net/)
 
 ## Project setup
 ```
