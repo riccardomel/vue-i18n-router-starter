@@ -19,6 +19,11 @@ function getLocaleRegex() {
   return `(${reg})`;
 }
 
+// Returns locale configuration
+function getLocale(locale = 'en') {
+  return SUPPORTED_LOCALES.find(loc => loc.code === locale);
+}
+
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -28,21 +33,14 @@ const router = new VueRouter({
       template: '<router-view></router-view>'
     },
     beforeEnter(to, from, next) {
-      const locale = to.params.locale || 'en';
-      const base = to.params.locale ? `/${to.params.locale}` : '';
-      if (locale) {
-        store.dispatch('setLocale', {
-          locale,
-          base
-        });
-      }
-
-      axios.get(`/translations/${locale}.json`).then(res => {
-        i18n.setLocaleMessage(locale, res.data || {});
+      const locale = getLocale(to.params.locale);
+      store.dispatch('setLocale', locale);
+      axios.get(locale.translations).then(res => {
+        i18n.setLocaleMessage(locale.code, res.data || {});
       }).catch(() => {
         // TODO handle error
       }).finally(() => {
-        i18n.locale = locale;
+        i18n.locale = locale.code;
         next();
       });
     },

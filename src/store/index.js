@@ -5,19 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    locale: {}
   },
   getters: {
     locale(state) {
       return state.locale
-    },
-    base(state) {
-      return state.base
     }
   },
   mutations: {
     setLocale(state, payload) {
-      state.locale = payload.locale
-      state.base = payload.base
+      state.locale = payload
     }
   },
   actions: {
